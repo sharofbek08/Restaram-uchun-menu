@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Safar — Admin panel</title>
+    <link rel="stylesheet" href="/admin/style.css">
+    <script src="/admin/app.js" defer></script>
+</head>
+<body>
+    <header><a href="/">safar <small>RESTORAN</small></a><a href="/">Menyuni ko‘rish ↗</a></header>
+    <main>
+        <div class="heading"><div><p>BOSHQARUV</p><h1>Admin panel</h1></div><button id="logout" hidden>Chiqish</button></div>
+        <p id="status" role="status" aria-live="polite"></p>
+        <form id="login" class="panel login" hidden>
+            <h2>Xush kelibsiz</h2><p>Menyuni boshqarish uchun parolingizni kiriting.</p>
+            <label>Admin paroli<input name="password" type="password" autocomplete="current-password" required></label>
+            <button type="submit">Kirish</button>
+        </form>
+        <section id="dashboard" hidden>
+            <div class="layout">
+                <form id="editor" class="panel">
+                    <h2 id="form-title">Yangi taom</h2>
+                    <label>Taom nomi<input name="name" maxlength="100" required></label>
+                    <label>Kategoriya<input name="category" list="category-list" maxlength="100" required></label>
+                    <datalist id="category-list"></datalist>
+                    <button type="button" id="add-category" class="category-add" aria-expanded="false" aria-controls="category-box">
+                        <span class="category-add-icon" aria-hidden="true">+</span>
+                        <span>Kategoriya qo‘shish</span>
+                        <svg class="category-add-arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 8 4 4 4-4"/></svg>
+                    </button>
+                    <div id="category-box" class="category-box" hidden>
+                        <label for="category-name">Yangi kategoriya nomi</label>
+                        <input id="category-name" maxlength="100" placeholder="Masalan: Shirinliklar">
+                        <div class="actions"><button type="button" id="save-category">Qo‘shish</button><button type="button" id="cancel-category" class="secondary">Bekor qilish</button></div>
+                        <p id="category-status" role="status"></p>
+                    </div>
+                    <div class="pair">
+                        <label>Narxi (so‘m)<input name="price" type="number" min="0" max="100000000" step="1" required></label>
+                        <label>Porsiya<input name="portion" maxlength="100" placeholder="350 g yoki 1 dona"></label>
+                    </div>
+                    <label>Tavsif<textarea name="description" maxlength="1000" rows="3"></textarea></label>
+                    <div class="upload-field">
+                        <span class="upload-label" id="photo-label">Taom rasmi</span>
+                        <label class="upload-card">
+                            <input name="photo" type="file" accept="image/jpeg,image/png,image/webp" aria-labelledby="photo-label" aria-describedby="photo-help photo-name" required>
+                            <span class="upload-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m3 17 5-5 4 4 3-3 6 6"/></svg>
+                            </span>
+                            <strong>Taomingiz rasmini qo‘shing</strong>
+                            <span class="upload-description">Qurilmangizdan sifatli surat tanlang</span>
+                            <span class="upload-button" id="photo-button">Rasm tanlash <span aria-hidden="true">↗</span></span>
+                            <span id="photo-name" class="upload-filename" aria-live="polite">Hali rasm tanlanmagan</span>
+                        </label>
+                        <p id="photo-help" class="upload-help"><span>JPG, PNG, WebP</span><span>5 MB gacha</span></p>
+                        <p class="hint">Yangi rasm tanlanmasa, mavjud rasm saqlanadi.</p>
+                    </div>
+                    <img id="preview" alt="Tanlangan rasm" hidden>
+                    <div class="actions"><button type="submit">Saqlash</button><button type="button" id="cancel" class="secondary">Tozalash</button></div>
+                </form>
+                <div class="panel"><div class="list-head"><h2>Taomlar <span id="dish-count"></span></h2><input id="search" type="search" placeholder="Taomni qidirish" aria-label="Taomni qidirish"></div><div id="category-filters" class="category-filters" role="group" aria-label="Taom kategoriyalari"></div><div id="list"></div></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Safar restoranining milliy taomlar menyusi. Taomlarni toping va tanlovingizni jamlang.">
+        <title>Safar restoran</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="#">
+                safar
+                <span>RESTORAN</span>
+            </a>
+            <nav>
+                <a href="#menu">Menyu</a>
+                <a href="/admin">Admin</a>
+            </nav>
+            <button id="basket" class="bag">
+                Tanlovim
+                <b id="count">0</b>
+            </button>
+        </header>
+        <main id="about">
+            <span>Milliy ta'mlar</span>
+            <span>Saralangan mahsulotlar</span>
+            <span>Mehirli xizmat</span>
+            <span>Unutilmas ta'mlar</span>
+        </main>
+        <section id="menu" class="menu">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">Kunglingiz tusagan taom</span>
+                    <h2>
+                        Bizning menyu
+                    </h2>
+                    <span>.</span>
+                </div>
+                <p>
+                    Sevimli taomlaringizni tanlang.<br>
+                    Qolganlarini bizga quyib bering.
+                </p>
+            </div>
+            <div class="toolbar">
+                <div id="categories" class="categories" aria-label="Taom Kategorialari">
+                    <button class="active" aria-pressed="true" data-category="Barchasi">Barchasi</button>
+                    <button class aria-pressed="false" data-category="Milliy taomlar">Milliy taomlari</button>
+                    <button class aria-pressed="false" data-category="Kaboblar">Kaboblar</button>
+                    <button class aria-pressed="false" data-category="Sho‘rvalar">Sho‘rvalar</button>
+                    <button class aria-pressed="false" data-category="Salatlar">Salatlar</button>
+                    <button class aria-pressed="false" data-category="Ichimliklar">Ichimliklar</button>
+                </div>
+                <label class="search">
+                    <span>🔍</span>
+                    <input type="search" placeholder="Taomni qidirish" aria-label="Taomni qidirish">
+                </label>
+            </div>
+            <div class="result-line">
+                <span id="result">0 taom va ichimlik</span>
+                <span>Narxlar so'mda ko'rsatilgan</span>
+            </div>
+            <div id="products" class="products">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1544025162-d76694265947.jpg" alt="Kabob uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Kabob</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Kabobni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512058564366-18510be2db19.jpg" alt="Bayram osh uchun namunaviy surat" loading="lazy">
+                        <span class="tag">ENG SEVIMLI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 350 g</div>
+                        <h3>Bayram osh</h3>
+                        <p>Lazer guruch, mayin mol go‘shti, sariq sabzi va no‘xat.</p>
+                        <div class="card-bottom">
+                        <span class="price">45,000 <small>so‘m</small></span>
+                        <button class="add" data-add="1" aria-label="Bayram oshni tanlash">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1563245372-f21724e3856d.jpg" alt="Manti uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 5 dona</div>
+                        <h3>Manti</h3>
+                        <p>Bug‘da pishirilgan, mol go‘shti va piyozli manti.</p>
+                        <div class="card-bottom">
+                            <span class="price">35,000 <small>so‘m</small></span>
+                            <button class="add" data-add="9" aria-label="Manti — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1601050690597-df0568f70950.jpg" alt="Somsa uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Milliy taomlar · 1 dona</div>
+                        <h3>Somsa</h3>
+                        <p>Tandirda pishirilgan, go‘shtli qatlama somsa.</p>
+                        <div class="card-bottom">
+                            <span class="price">12,000 <small>so‘m</small></span>
+                            <button class="add" data-add="10" aria-label="Somsa — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1544025162-d76694265947.jpg" alt="Mol go‘shtli kabob uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Kaboblar · 200 g</div>
+                        <h3>Mol go‘shtli kabob</h3>
+                        <p>Cho‘g‘da pishirilgan mol go‘shti, piyoz va ko‘katlar.</p>
+                        <div class="card-bottom">
+                            <span class="price">42,000 <small>so‘m</small></span>
+                            <button class="add" data-add="11" aria-label="Mol go‘shtli kabob — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1532550907401-a500c9a57435.jpg" alt="Tovuq kabob uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Kaboblar · 200 g</div>
+                        <h3>Tovuq kabob</h3>
+                        <p>Ziravorlarda marinadlangan mayin tovuq kabobi.</p>
+                        <div class="card-bottom">
+                            <span class="price">32,000 <small>so‘m</small></span>
+                            <button class="add" data-add="12" aria-label="Tovuq kabob — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1547592180-85f173990554.jpg" alt="Qaynatma sho‘rva uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Sho‘rvalar · 400 ml</div>
+                        <h3>Qaynatma sho‘rva</h3>
+                        <p>Mol go‘shti, kartoshka, sabzi va sabzavotli sho‘rva.</p>
+                        <div class="card-bottom">
+                            <span class="price">30,000 <small>so‘m</small></span>
+                            <button class="add" data-add="13" aria-label="Qaynatma sho‘rva — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1512621776951-a57141f2eefd.jpg" alt="Achchiq-chuchuk uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Salatlar · 200 g</div>
+                        <h3>Achchiq-chuchuk</h3>
+                        <p>Yangi pomidor, bodring, piyoz va ko‘katlar.</p>
+                        <div class="card-bottom">
+                            <span class="price">15,000 <small>so‘m</small></span>
+                            <button class="add" data-add="14" aria-label="Achchiq-chuchuk — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/photo-1544787219-7f47ccb76574.jpg" alt="Ko‘k choy uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Ichimliklar · 1 choynak</div>
+                        <h3>Ko‘k choy</h3>
+                        <p>Yangi damlangan xushbo‘y ko‘k choy.</p>
+                        <div class="card-bottom">
+                            <span class="price">8,000 <small>so‘m</small></span>
+                            <button class="add" data-add="15" aria-label="Ko‘k choy — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="images/limonad.jpg" alt="Limonad uchun namunaviy surat" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="dish-meta">Ichimliklar · 400 ml</div>
+                        <h3>Limonad</h3>
+                        <p>Limon, yalpiz va muz bilan tayyorlangan salqin ichimlik.</p>
+                        <div class="card-bottom">
+                            <span class="price">18,000 <small>so‘m</small></span>
+                            <button class="add" data-add="16" aria-label="Limonad — tanlovga qo‘shish">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <dialog id="cart" aria-labelledby="cart-title">
+            <div class="cart-heading">
+                <h2 id="cart-title">Sizning tanlovingiz</h2>
+                <button id="close-cart" type="button" aria-label="Yopish">×</button>
+            </div>
+            <div id="cart-items"></div>
+            <p class="cart-total">Jami: <strong id="total">0 so‘m</strong></p>
+            <p>Tanlovingizni ofitsiantga ko‘rsating. Buyurtma restoranga yuborilmaydi.</p>
+        </dialog>
+        <p id="notice" role="status" aria-live="polite"></p>
+        <script src="app.js"></script>
+    </body>
+</html>
